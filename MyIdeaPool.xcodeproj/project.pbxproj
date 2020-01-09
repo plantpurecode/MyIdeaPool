@@ -92,8 +92,6 @@
 		52F006F2235250AB0084DC23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52F006F7235250AB0084DC23 /* MyIdeaPoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyIdeaPoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F006FD235250AB0084DC23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52F00706235250AB0084DC23 /* MyIdeaPoolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIdeaPoolUITests.swift; sourceTree = "<group>"; };
-		52F00708235250AB0084DC23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +165,6 @@
 			children = (
 				52F006E3235250A90084DC23 /* MyIdeaPool */,
 				52F006FA235250AB0084DC23 /* MyIdeaPoolTests */,
-				52F00705235250AB0084DC23 /* MyIdeaPoolUITests */,
 				52F006E2235250A90084DC23 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -212,15 +209,6 @@
 				52F006FD235250AB0084DC23 /* Info.plist */,
 			);
 			path = MyIdeaPoolTests;
-			sourceTree = "<group>";
-		};
-		52F00705235250AB0084DC23 /* MyIdeaPoolUITests */ = {
-			isa = PBXGroup;
-			children = (
-				52F00706235250AB0084DC23 /* MyIdeaPoolUITests.swift */,
-				52F00708235250AB0084DC23 /* Info.plist */,
-			);
-			path = MyIdeaPoolUITests;
 			sourceTree = "<group>";
 		};
 		52F00714235251770084DC23 /* User Interface */ = {
