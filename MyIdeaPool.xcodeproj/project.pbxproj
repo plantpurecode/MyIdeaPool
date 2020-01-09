@@ -32,8 +32,6 @@
 		5274094B2355658600FF42DF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274094A2355658600FF42DF /* MainView.swift */; };
 		529847322355CB870022CC5D /* IdeasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529847312355CB870022CC5D /* IdeasService.swift */; };
 		529847332355CB870022CC5D /* IdeasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529847312355CB870022CC5D /* IdeasService.swift */; };
-		529847352355D0BC0022CC5D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529847342355D0BC0022CC5D /* UserService.swift */; };
-		529847362355D0BC0022CC5D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529847342355D0BC0022CC5D /* UserService.swift */; };
 		529847382355D10E0022CC5D /* AuthenticatedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529847372355D10E0022CC5D /* AuthenticatedService.swift */; };
 		529847392355D10E0022CC5D /* AuthenticatedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529847372355D10E0022CC5D /* AuthenticatedService.swift */; };
 		5298473C2355DC4B0022CC5D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298473B2355DC4B0022CC5D /* Models.swift */; };
@@ -77,7 +75,6 @@
 		527409432355634E00FF42DF /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		5274094A2355658600FF42DF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		529847312355CB870022CC5D /* IdeasService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasService.swift; sourceTree = "<group>"; };
-		529847342355D0BC0022CC5D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		529847372355D10E0022CC5D /* AuthenticatedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedService.swift; sourceTree = "<group>"; };
 		5298473B2355DC4B0022CC5D /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		529EB44823C137F000C8B4EF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -160,7 +157,6 @@
 				5274093023553B3900FF42DF /* Errors.swift */,
 				527409292354FDCD00FF42DF /* AccessTokenService.swift */,
 				529847372355D10E0022CC5D /* AuthenticatedService.swift */,
-				529847342355D0BC0022CC5D /* UserService.swift */,
 				529847312355CB870022CC5D /* IdeasService.swift */,
 			);
 			path = Services;
@@ -385,7 +381,6 @@
 				529847382355D10E0022CC5D /* AuthenticatedService.swift in Sources */,
 				5274093323553B9D00FF42DF /* IdeaPoolRequestFactory.swift in Sources */,
 				52F006E9235250A90084DC23 /* RootView.swift in Sources */,
-				529847352355D0BC0022CC5D /* UserService.swift in Sources */,
 				5265BFB9235EAFB400492E7C /* AuthenticationView.swift in Sources */,
 				5274093123553B3900FF42DF /* Errors.swift in Sources */,
 				5265BFBB235EB1BB00492E7C /* CreateEditIdeaView.swift in Sources */,
@@ -406,7 +401,6 @@
 				5274092C2354FDDA00FF42DF /* Service.swift in Sources */,
 				527409262354FCFD00FF42DF /* AccessTokenServiceTests.swift in Sources */,
 				5274094023554CCB00FF42DF /* Errors.swift in Sources */,
-				529847362355D0BC0022CC5D /* UserService.swift in Sources */,
 				5274092D2354FE6300FF42DF /* AccessTokenService.swift in Sources */,
 				5274092F2354FF0100FF42DF /* ServiceTestHelpers.swift in Sources */,
 			);
