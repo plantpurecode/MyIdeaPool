@@ -87,9 +87,9 @@ class RootViewModel: BaseViewModel {
                 // Request ideas when we are finished refreshing access tokens.
                 if ideasListViewModel == nil {
                     ideasListViewModel = IdeasListViewModel(ideasService: IdeasService(session: session), upstreamViewModel: self)
+                } else {
+                    ideasListViewModel?.requestAllIdeas()
                 }
-                
-                ideasListViewModel?.requestAllIdeas()
             }
             
             self.showingActivityIndicator = self.refreshingAccessTokens
