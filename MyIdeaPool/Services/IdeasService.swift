@@ -10,14 +10,10 @@ import Foundation
 import Combine
 
 enum IdeasServiceError: ErrorConvertible {
-    init(error: Error) {
-        if let selfError = error as? Self {
-            self = selfError
-        } else {
-            self = .underlying(error)
-        }
+    static func makeUnderlyingError(error: Error) -> IdeasServiceError {
+        return IdeasServiceError.underlying(error)
     }
-
+    
     case invalidParameters(String)
     case invalidIdea(String)
     case requestCreation
@@ -41,13 +37,11 @@ class IdeasService: AuthenticatedService {
         }
         
         do {
-            let publisher:AnyPublisher<ConcreteIdea, IdeasServiceError> = try requestFactory.request(path: "ideas", method: "POST") {
+            return try requestFactory.request(path: "ideas", method: "POST") {
                 $0.addValue(session.jwt, forHTTPHeaderField: "X-Access-Token")
 
                 try $0.encoding(encoder: .json, body: idea)
             }
-            
-            return publisher
         } catch {
             return Fail<ConcreteIdea, IdeasServiceError>(error: .requestCreation).eraseToAnyPublisher()
         }

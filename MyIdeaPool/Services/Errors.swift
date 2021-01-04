@@ -10,6 +10,18 @@ import Foundation
 
 protocol ErrorConvertible: Error {
     init(error: Error)
+    
+    static func makeUnderlyingError(error: Error) -> Self
+}
+
+extension ErrorConvertible {
+    init(error: Error) {
+        if let e = error as? Self {
+            self = e
+        } else {
+            self = Self.makeUnderlyingError(error: error)
+        }
+    }
 }
 
 enum IdeaPoolError: ErrorConvertible, CustomStringConvertible {
@@ -17,12 +29,8 @@ enum IdeaPoolError: ErrorConvertible, CustomStringConvertible {
     case server(reason: String)
     case underlying(Error)
 
-    init(error: Error) {
-        if let er = error as? Self {
-            self = er
-        } else {
-            self = .underlying(error)
-        }
+    static func makeUnderlyingError(error: Error) -> IdeaPoolError {
+        return IdeaPoolError.underlying(error)
     }
     
     var description: String {
