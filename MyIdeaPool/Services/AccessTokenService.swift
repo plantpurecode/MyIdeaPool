@@ -97,8 +97,8 @@ class AccessTokenService: Service, Codable {
         self.requestFactory = IdeaPoolRequestFactory()
         self.session = try? decoder.singleValueContainer().decode(IdeaPoolSession.self)
         
-        DispatchQueue.main.async {
-             self.hasValidSession = self.session?.isValid ?? false
+        defer {
+            self.hasValidSession = self.session?.isValid ?? false
         }
         
         if (self.session?.isValid ?? true) == false {
@@ -191,7 +191,6 @@ class AccessTokenService: Service, Codable {
         do {
             return try requestFactory.request(path: "/access-tokens", method: "DELETE") {
                 $0.addValue(accessToken, forHTTPHeaderField: "X-Access-Token")
-                $0.addValue("application/json", forHTTPHeaderField: "Accept")
 
                 try $0.encoding(encoder: .json, body: [
                     "refresh_token": refreshToken
